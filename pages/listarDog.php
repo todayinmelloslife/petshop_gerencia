@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="../style/header.css">
 <link rel="stylesheet" href="../style/footer.css">
 <link rel="stylesheet" href="../style/menu.css">
+<link rel="stylesheet" href="../style/table.css">
 
 <main class="container">
   <h2>Lista de Doguinhos</h2>

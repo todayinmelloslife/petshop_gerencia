@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="../style/header.css">
 <link rel="stylesheet" href="../style/footer.css">
 <link rel="stylesheet" href="../style/menu.css">
+<link rel="stylesheet" href="../style/forms.css">
 <link rel="stylesheet" href="../style/style.css">
 
 <main class="container">
