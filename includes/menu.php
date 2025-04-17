@@ -1,7 +1,7 @@
 <nav class="npw-menu">
   <ul>
     <li>
-      <a href="../pages/index.php">
+      <a href="/petshop_gerencia/pages/index.php">
         <div class="menu-box">
           <img src="/petshop_gerencia/img/logo.JPG" alt="Dashboard">
           <span>🏠 Dashboard</span>
@@ -9,15 +9,15 @@
       </a>
     </li>
     <li>
-      <a href="../pages/cadastroDog.php">
+      <a href="/petshop_gerencia/pages/cadastroDog.php">
         <div class="menu-box">
-          <img src="/petshop_gerencia/img/patoNormal.JPG" alt="Cadastrar pato">
+          <img src="/petshop_gerencia/img/patoNormal.JPG" alt="Cadastrar Pato">
           <span>➕ Cadastrar Pato</span>
         </div>
       </a>
     </li>
     <li>
-      <a href="../pages/listarDog.php">
+      <a href="/petshop_gerencia/pages/listarDog.php">
         <div class="menu-box">
           <img src="/petshop_gerencia/img/patoBanho.JPG" alt="Ver Cães">
           <span>🐶 Ver Pato</span>
@@ -25,7 +25,7 @@
       </a>
     </li>
     <li>
-      <a href="../pages/cadastroProd.php">
+      <a href="/petshop_gerencia/pages/cadastroProd.php">
         <div class="menu-box">
           <img src="/petshop_gerencia/img/shampoo.JPG" alt="Cadastrar Produto">
           <span>➕ Cadastrar Produto</span>
@@ -33,7 +33,7 @@
       </a>
     </li>
     <li>
-      <a href="../pages/listarProd.php">
+      <a href="/petshop_gerencia/pages/listarProd.php">
         <div class="menu-box">
           <img src="/petshop_gerencia/img/shampoo2.JPG" alt="Ver Produtos">
           <span>📦 Ver Produtos</span>
