@@ -30,6 +30,15 @@
     <label for="foto">Foto do pato:</label>
     <input type="file" name="foto" id="foto" accept="image/*" required>
 
+    <label for="produto">Produto usado:</label>
+    <select name="produto" id="produto" required>
+      <option value="QuackPoo">QuackPoo (shampoo)</option>
+      <option value="Saboneto">Saboneto (sabonete líquido)</option>
+      <option value="PataLimpinha">PataLimpinha (sabonete em barra)</option>
+      <option value="EspumaPluma">EspumaPluma (sabonete espumante)</option>
+      <option value="QuackBrilho">QuackBrilho (condicionador)</option>
+    </select>
+
     <button type="submit">Cadastrar</button>
   </form>
 </main>

@@ -12,11 +12,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $idade = (int)$_POST['idade'];
     $dono = mysqli_real_escape_string($conn, $_POST['dono']);
     $observacoes = mysqli_real_escape_string($conn, $_POST['observacoes']);
+    $produto = mysqli_real_escape_string($conn, $_POST['produto']);
 
-    $foto = $_FILES['foto'];
-    $fotoPath = '../img/' . basename($foto['name']);
-    if (!move_uploaded_file($foto['tmp_name'], $fotoPath)) {
-        die('Erro ao fazer upload da foto.');
+    // Handle file upload
+    $fotoPath = null;
+    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+        $fotoDir = '../uploads/';
+        if (!is_dir($fotoDir)) {
+            mkdir($fotoDir, 0777, true); // Create the directory if it doesn't exist
+        }
+        $fotoPath = $fotoDir . basename($_FILES['foto']['name']);
+        if (!move_uploaded_file($_FILES['foto']['tmp_name'], $fotoPath)) {
+            die('Erro ao fazer upload da foto.');
+        }
     }
 
     // Create the table if it doesn't exist
@@ -28,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             idade INT NOT NULL,
             dono VARCHAR(100) NOT NULL,
             observacoes TEXT,
-            foto VARCHAR(255)
+            foto VARCHAR(255) DEFAULT NULL,
+            produto VARCHAR(50) DEFAULT NULL
         )
     ";
     if (!mysqli_query($conn, $createTableQuery)) {
@@ -37,8 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insert the data into the table
     $insertQuery = "
-        INSERT INTO caes (nome, raca, idade, dono, observacoes, foto)
-        VALUES ('$nome', '$raca', $idade, '$dono', '$observacoes', '$fotoPath')
+        INSERT INTO caes (nome, raca, idade, dono, observacoes, foto, produto)
+        VALUES ('$nome', '$raca', $idade, '$dono', '$observacoes', '$fotoPath', '$produto')
     ";
     if (mysqli_query($conn, $insertQuery)) {
         header('Location: ../pages/listarDog.php'); // Redirect to listarDog.php

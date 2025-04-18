@@ -23,6 +23,16 @@
     font-size: 14px;
   }
   
+  .form-pet select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+  }
+  
   .form-pet button {
     margin-top: 20px;
     padding: 12px 20px;
@@ -92,4 +102,3 @@
   .btn:hover {
       opacity: 0.9;
   }
-  

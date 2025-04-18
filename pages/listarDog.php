@@ -20,7 +20,8 @@
         <th>Dono</th>
         <th>Observações</th>
         <th>Foto</th>
-        <th>Ações</th> <!-- New column for actions -->
+        <th>Produto</th> <!-- New column for product -->
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -32,21 +33,28 @@
       if ($result && mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_assoc($result)) {
               echo "<tr>";
-              echo "<td>" . $row['id'] . "</td>";
-              echo "<td>" . $row['nome'] . "</td>";
-              echo "<td>" . $row['raca'] . "</td>";
-              echo "<td>" . $row['idade'] . "</td>";
-              echo "<td>" . $row['dono'] . "</td>";
-              echo "<td>" . $row['observacoes'] . "</td>";
-              echo "<td><img src='" . $row['foto'] . "' alt='Foto do Pato' style='width: 50px; height: auto;'></td>";
+              echo "<td>" . htmlspecialchars($row['id']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['nome']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['raca']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['idade']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['dono']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['observacoes']) . "</td>";
+              echo "<td>";
+              if (!empty($row['foto'])) {
+                  echo "<img src='" . htmlspecialchars($row['foto']) . "' alt='Foto do Pato' style='width: 100px; height: auto;'>";
+              } else {
+                  echo "Sem foto";
+              }
+              echo "</td>";
+              echo "<td>" . htmlspecialchars($row['produto']) . "</td>"; // Display product
               echo "<td>
-                      <a href='../actions/delete_cao.php?id=" . $row['id'] . "' class='btn-delete'>Excluir</a>
-                      <a href='editarDog.php?id=" . $row['id'] . "' class='btn-edit'>Editar</a>
+                      <a href='../actions/delete_cao.php?id=" . htmlspecialchars($row['id']) . "' class='btn-delete'>Excluir</a>
+                      <a href='editarDog.php?id=" . htmlspecialchars($row['id']) . "' class='btn-edit'>Editar</a>
                     </td>";
               echo "</tr>";
           }
       } else {
-          echo "<tr><td colspan='8'>Nenhum pato cadastrado.</td></tr>";
+          echo "<tr><td colspan='9'>Nenhum pato cadastrado.</td></tr>";
       }
       ?>
     </tbody>
