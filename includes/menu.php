@@ -1,10 +1,11 @@
 <nav class="npw-menu">
   <ul>
+
     <li>
-      <a href="/petshop_gerencia/pages/index.php">
+      <a href="/petshop_gerencia/pages/dashboard.php">
         <div class="menu-box">
           <img src="/petshop_gerencia/img/logo.JPG" alt="Dashboard">
-          <span>🏠 Dashboard</span>
+          <span>📊 Dashboard</span>
         </div>
       </a>
     </li>
