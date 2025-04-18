@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../style/menu.css">
 
 <main class="container">
-  <h2>Editar Doguinho</h2>
+  <h2>Editar Pato</h2>
   <?php
   if (isset($_GET['id'])) {
       $id = (int)$_GET['id'];
@@ -17,9 +17,9 @@
       if ($result && mysqli_num_rows($result) > 0) {
           $row = mysqli_fetch_assoc($result);
   ?>
-  <form action="../actions/update_cao.php" method="POST" class="form-pet">
+  <form action="../actions/update_cao.php" method="POST" class="form-pet" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-    <label for="nome">Nome do cachorro:</label>
+    <label for="nome">Nome do pato:</label>
     <input type="text" name="nome" id="nome" value="<?php echo $row['nome']; ?>" required>
 
     <label for="raca">Raça:</label>
@@ -33,6 +33,9 @@
 
     <label for="observacoes">Observações:</label>
     <textarea name="observacoes" id="observacoes" rows="4"><?php echo $row['observacoes']; ?></textarea>
+
+    <label for="foto">Foto do pato:</label>
+    <input type="file" name="foto" id="foto" accept="image/*">
 
     <button type="submit">Salvar Alterações</button>
   </form>

@@ -9,10 +9,10 @@
 <link rel="stylesheet" href="../style/style.css">
 
 <main class="container">
-  <h2>Cadastro de Doguinho</h2>
+  <h2>Cadastro de Pato</h2>
 
-  <form action="../actions/insert_cao.php" method="POST" class="form-pet">
-    <label for="nome">Nome do cachorro:</label>
+  <form action="../actions/insert_cao.php" method="POST" class="form-pet" enctype="multipart/form-data">
+    <label for="nome">Nome do pato:</label>
     <input type="text" name="nome" id="nome" required>
 
     <label for="raca">Raça:</label>
@@ -26,6 +26,9 @@
 
     <label for="observacoes">Observações:</label>
     <textarea name="observacoes" id="observacoes" rows="4" placeholder="Alergias, temperamento, etc."></textarea>
+
+    <label for="foto">Foto do pato:</label>
+    <input type="file" name="foto" id="foto" accept="image/*" required>
 
     <button type="submit">Cadastrar</button>
   </form>

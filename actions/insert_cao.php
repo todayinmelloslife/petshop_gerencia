@@ -13,6 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dono = mysqli_real_escape_string($conn, $_POST['dono']);
     $observacoes = mysqli_real_escape_string($conn, $_POST['observacoes']);
 
+    $foto = $_FILES['foto'];
+    $fotoPath = '../img/' . basename($foto['name']);
+    if (!move_uploaded_file($foto['tmp_name'], $fotoPath)) {
+        die('Erro ao fazer upload da foto.');
+    }
+
     // Create the table if it doesn't exist
     $createTableQuery = "
         CREATE TABLE IF NOT EXISTS caes (
@@ -21,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             raca VARCHAR(100) NOT NULL,
             idade INT NOT NULL,
             dono VARCHAR(100) NOT NULL,
-            observacoes TEXT
+            observacoes TEXT,
+            foto VARCHAR(255)
         )
     ";
     if (!mysqli_query($conn, $createTableQuery)) {
@@ -30,8 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insert the data into the table
     $insertQuery = "
-        INSERT INTO caes (nome, raca, idade, dono, observacoes)
-        VALUES ('$nome', '$raca', $idade, '$dono', '$observacoes')
+        INSERT INTO caes (nome, raca, idade, dono, observacoes, foto)
+        VALUES ('$nome', '$raca', $idade, '$dono', '$observacoes', '$fotoPath')
     ";
     if (mysqli_query($conn, $insertQuery)) {
         header('Location: ../pages/listarDog.php'); // Redirect to listarDog.php
