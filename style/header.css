@@ -30,3 +30,34 @@ h1, p {
   letter-spacing: 2px;
   color: #596396;
 }
+
+.npw-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.npw-nav ul li {
+  background-color: #596396;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.npw-nav ul li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.npw-nav ul li a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  text-align: center;
+}

@@ -2,10 +2,10 @@
 <?php include '../includes/menu.php'; ?>
 <?php include '../includes/conexao.php'; ?>
 
-<link rel="stylesheet" href="../style/header.css">
-<link rel="stylesheet" href="../style/footer.css">
-<link rel="stylesheet" href="../style/menu.css?v=2.0">
-<link rel="stylesheet" href="../style/forms.css?v=1.0">
+<link rel="stylesheet" href="../style/header.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../style/footer.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../style/menu.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="../style/forms.css?v=<?php echo time(); ?>">
 
 <main class="container">
   <h2>Editar Pato</h2>

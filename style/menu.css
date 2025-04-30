@@ -8,18 +8,6 @@ ul {
   margin-top: 4rem; 
 }
 
-.background-img {
-  background-image: url(../img/DUCK!.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.3;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 .menu-box {
   display: flex;
@@ -52,11 +40,13 @@ ul {
   margin-right: auto;
 }
 
+
 .menu-box a {
   text-decoration: none;
-  color: inherit;
+  color: inherit; 
   font-weight: bold;
   font-size: 1.4rem;
   font-family: inherit;
   margin-top: auto;
+  font-family: 'Courier New', Courier, monospace;
 }
