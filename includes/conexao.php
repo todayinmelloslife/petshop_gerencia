@@ -1,13 +1,11 @@
 <?php
-$servername = "localhost"; // Replace with your database server
-$username = "root";        // Replace with your database username
-$password = "";            // Replace with your database password
-$dbname = "petshop_db";    // Replace with your database name
+$servername = "localhost"; 
+$username = "root";        
+$password = "tioFabio1";            
+$dbname = "petshop_db";    
 
-// Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-// Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }

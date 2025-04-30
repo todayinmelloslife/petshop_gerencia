@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         WHERE id = $id
     ";
     if (mysqli_query($conn, $updateQuery)) {
-        header('Location: ../pages/listarDog.php'); // Redirect back to the list
+        header('Location: ../pages/listarDog.php');
         exit;
     } else {
         echo "Erro ao atualizar: " . mysqli_error($conn);

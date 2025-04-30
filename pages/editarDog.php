@@ -4,8 +4,8 @@
 
 <link rel="stylesheet" href="../style/header.css">
 <link rel="stylesheet" href="../style/footer.css">
-<link rel="stylesheet" href="../style/menu.css">
-<link rel="stylesheet" href="../style/forms.css"> <!-- Link para o CSS -->
+<link rel="stylesheet" href="../style/menu.css?v=2.0">
+<link rel="stylesheet" href="../style/forms.css?v=1.0">
 
 <main class="container">
   <h2>Editar Pato</h2>
@@ -49,6 +49,15 @@
       <option value="PataLimpinha" <?php echo ($row['produto'] === 'PataLimpinha') ? 'selected' : ''; ?>>PataLimpinha (sabonete em barra)</option>
       <option value="EspumaPluma" <?php echo ($row['produto'] === 'EspumaPluma') ? 'selected' : ''; ?>>EspumaPluma (sabonete espumante)</option>
       <option value="QuackBrilho" <?php echo ($row['produto'] === 'QuackBrilho') ? 'selected' : ''; ?>>QuackBrilho (condicionador)</option>
+      <option value="SuperQuacker" <?php echo ($row['produto'] === 'SuperQuacker') ? 'selected' : ''; ?>>SuperQuack (Shampoo Anti-Caspa)</option>
+      <option value="Outro" <?php echo ($row['produto'] === 'Outro') ? 'selected' : ''; ?>>Outro</option>
+      <option value="Nenhum" <?php echo ($row['produto'] === 'Nenhum') ? 'selected' : ''; ?>>Nenhum</option>
+      <option value="Desconhecido" <?php echo ($row['produto'] === 'Desconhecido') ? 'selected' : ''; ?>>Desconhecido</option>
+      <option value="Não se aplica" <?php echo ($row['produto'] === 'Não se aplica') ? 'selected' : ''; ?>>Não se aplica</option>
+      <option value="Não informado" <?php echo ($row['produto'] === 'Não informado') ? 'selected' : ''; ?>>Não informado</option>
+      <option value="Não sei" <?php echo ($row['produto'] === 'Não sei') ? 'selected' : ''; ?>>Não sei</option>
+      <option value="Não aplicável" <?php echo ($row['produto'] === 'Não aplicável') ? 'selected' : ''; ?>>Não aplicável</option>
+      <option value="Não tenho certeza" <?php echo ($row['produto'] === 'Não tenho certeza') ? 'selected' : ''; ?>>Não tenho certeza</option>
     </select>
 
     <button type="submit">Salvar Alterações</button>

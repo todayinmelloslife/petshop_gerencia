@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+.h1, .p{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 40px auto;
     background: #fff;
     padding: 30px;
@@ -11,6 +17,7 @@
     display: block;
     margin-top: 15px;
     font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
   }
 
   .form-pet input,
@@ -21,6 +28,7 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
   }
 
   .form-pet button {
@@ -56,6 +64,7 @@
       background-color: #f4f4f4;
       color: #333;
       font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
   }
 
   .dog-table tr:nth-child(even) {
@@ -78,15 +87,15 @@
   }
 
   .btn {
-      background-color: #4CAF50; /* Green */
+      background-color: #4CAF50;
   }
 
   .btn-delete {
-      background-color: #f44336; /* Red */
+      background-color: #f44336; 
   }
 
   .btn-edit {
-      background-color: #2196F3; /* Blue */
+      background-color: #2196F3; 
   }
 
   .btn:hover {

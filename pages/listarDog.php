@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="../style/header.css">
 <link rel="stylesheet" href="../style/footer.css">
-<link rel="stylesheet" href="../style/menu.css">
+<link rel="stylesheet" href="../style/menu.css?v=2.0">
 <link rel="stylesheet" href="../style/table.css">
 
 <main class="container">
@@ -14,7 +14,7 @@
     <input type="text" id="search" name="search" placeholder="Digite o nome do pato">
     <button type="submit">Pesquisar</button>
   </form>
-  <a href="cadastroDog.php" class="btn">Cadastrar Novo Pato</a> <!-- Button to navigate to cadastroDog.php -->
+  <a href="cadastroDog.php" class="btn">Cadastrar Novo Pato</a>
   <table border="1" class="dog-table">
     <thead>
       <tr>
@@ -23,17 +23,17 @@
         <th>Raça</th>
         <th>Idade</th>
         <th>Dono</th>
+        <th>Telefone</th>
         <th>Observações</th>
         <th>Foto</th>
-        <th>Produto</th> <!-- New column for product -->
+        <th>Produto</th>
         <th>Ações</th>
       </tr>
     </thead>
     <tbody>
       <?php
-      // Fetch data from the 'caes' table with optional search filter
       $search = isset($_GET['search']) ? mysqli_real_escape_string($conn, $_GET['search']) : '';
-      $query = "SELECT * FROM caes";
+      $query = "SELECT * FROM patos";
       if (!empty($search)) {
           $query .= " WHERE nome LIKE '%$search%'";
       }
@@ -47,15 +47,17 @@
               echo "<td>" . htmlspecialchars($row['raca']) . "</td>";
               echo "<td>" . htmlspecialchars($row['idade']) . "</td>";
               echo "<td>" . htmlspecialchars($row['dono']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['telefone']) . "</td>";
               echo "<td>" . htmlspecialchars($row['observacoes']) . "</td>";
               echo "<td>";
               if (!empty($row['foto'])) {
-                  echo "<img src='" . htmlspecialchars($row['foto']) . "' alt='Foto do Pato' style='width: 100px; height: auto;'>";
+                  $fotoPath = '../uploads/' . htmlspecialchars($row['foto']);
+                  echo "<img src='$fotoPath' alt='Foto do Pato' style='width: 100px; height: auto;'>";
               } else {
                   echo "Sem foto";
               }
               echo "</td>";
-              echo "<td>" . htmlspecialchars($row['produto']) . "</td>"; // Display product
+              echo "<td>" . htmlspecialchars($row['produto']) . "</td>";
               echo "<td>
                       <a href='../actions/delete_cao.php?id=" . htmlspecialchars($row['id']) . "' class='btn-delete'>Excluir</a>
                       <a href='editarDog.php?id=" . htmlspecialchars($row['id']) . "' class='btn-edit'>Editar</a>
@@ -64,6 +66,7 @@
           }
       } else {
           echo "<tr><td colspan='9'>Nenhum pato encontrado.</td></tr>";
+      }
       }
       ?>
     </tbody>
@@ -76,7 +79,7 @@
     const rows = document.querySelectorAll('.dog-table tbody tr');
 
     rows.forEach(row => {
-      const nameCell = row.querySelector('td:nth-child(2)'); // Assuming the name is in the second column
+      const nameCell = row.querySelector('td:nth-child(2)');
       if (nameCell) {
         const nameText = nameCell.textContent.toLowerCase();
         if (nameText.includes(searchValue)) {

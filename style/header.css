@@ -1,8 +1,15 @@
-/* Alterando para a fonte Luckiest Guy para títulos */
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
 
-body, h1, p {
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+h1, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,15 +17,15 @@ body, h1, p {
 }
 
 .npw-header p {
-  font-family: 'Open Sans', sans-serif; /* Mantido Open Sans para parágrafo */
+  font-family: 'Open Sans', sans-serif;
   font-size: 21px;
   margin-top: 10px;
   color: #596396;
 }
 
 .npw-header h1 {
-  font-family: 'Luckiest Guy', sans-serif; /* Alterado para Luckiest Guy */
-  font-size: 56px; /* Adicionado !important para garantir a aplicação */
+  font-family: 'Luckiest Guy', sans-serif; 
+  font-size: 56px;
   font-weight: bolder;
   letter-spacing: 2px;
   color: #596396;

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema Interno | PetShop NPW</title>
-  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/header.css?v=1.0">
 </head>
 <body>
   <header class="npw-header">
-    <h1>  Gestão de PetShop</h1>
-    <p>Sim, a NPW também cuida dos doguinhos. Cada linha de código, um latido a menos na bagunça.</p>
+    <h1> Dr Quack</h1>
+    <p>O melhor lugar para patar com Patos</p>
   </header>
 </body>
 </html>
