@@ -3,7 +3,6 @@
 <body>
   <header class="npw-header">
     <h1> Dr Quack</h1>
-    <p>O melhor lugar para patar com Patos</p>
     <nav class="npw-nav">
       <ul>
         <li><a href="/petshop_gerencia/index.php">Início</a></li>

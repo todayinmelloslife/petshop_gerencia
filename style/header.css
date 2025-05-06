@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -13,22 +13,28 @@ h1, p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left;
+  margin: 10px 10px;
 }
 
-.npw-header p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 21px;
-  margin-top: 10px;
-  color: #596396;
+.npw-header {
+  padding: 0 10px;
+}
+
+.npw-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .npw-header h1 {
   font-family: 'Luckiest Guy', sans-serif; 
-  font-size: 56px;
+  font-size: 25px;
   font-weight: bolder;
   letter-spacing: 2px;
   color: #596396;
+  margin: 0; /* removendo margem duplicada */
 }
 
 .npw-nav ul {
@@ -36,14 +42,13 @@ h1, p {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  gap: 10px; 
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 .npw-nav ul li {
   background-color: #596396;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 8px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -56,8 +61,9 @@ h1, p {
 .npw-nav ul li a {
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
+  font-size: 10px;
   color: #fff;
   display: block;
+  padding: 6px 10px;
   text-align: center;
 }
