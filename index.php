@@ -1,10 +1,9 @@
 <?php
-// Inclui arquivos essenciais
 include 'includes/header.php'; 
 include 'includes/footer.php'; 
 include 'includes/menu.php'; 
 
-// Carrega as folhas de estilo com controle dinâmico de cache
+
 ?>
 <link rel="stylesheet" href="./style/header.css?v=<?php echo time(); ?>">
 <link rel="stylesheet" href="./style/footer.css?v=<?php echo time(); ?>">
@@ -32,27 +31,7 @@ include 'includes/menu.php';
     </section>
 </main>
 
-<style>
-    .welcome-container {
-        text-align: center;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
 
-    .services ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .services li {
-        margin: 10px 0;
-        font-size: 1.2em;
-    }
-
-    .about {
-        margin-top: 20px;
-    }
-</style>
 
 
 
