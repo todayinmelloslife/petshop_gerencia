@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +11,22 @@ ul {
   margin-top: 4rem; 
 }
 
+h1.npw-title { 
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  margin-top: 2rem;
+  color: #596396;
+}
+
+h2.npw-subtitle { 
+  text-align: center;
+  font-size: 30px;
+  font-family: luckiest-guy, sans-serif;
+  font-weight: bolder;
+  color: #596396;
+  }
 
 .menu-box {
   display: flex;

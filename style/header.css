@@ -1,31 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: left;
-}
-
-
-h1, p {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-align: left;
-  margin: 10px 10px;
 }
 
 .npw-header {
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .npw-header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+  align-items: center; 
 }
 
 .npw-header h1 {
@@ -34,16 +23,21 @@ h1, p {
   font-weight: bolder;
   letter-spacing: 2px;
   color: #596396;
-  margin: 0; /* removendo margem duplicada */
+  margin: 0;
+}
+
+.npw-header p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin-top: 4px;
 }
 
 .npw-nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: flex-end;
   gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .npw-nav ul li {
@@ -61,7 +55,8 @@ h1, p {
 .npw-nav ul li a {
   text-decoration: none;
   font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: 600;
   color: #fff;
   display: block;
   padding: 6px 10px;
